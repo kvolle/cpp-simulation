@@ -1,0 +1,56 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/agent.h
+iostream
+-
+cmath
+-
+target.h
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
+
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
+cstdlib
+-
+cstdio
+-
+
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/visualization.h
+stdlib.h
+-
+GL/glut.h
+-
+GL/gl.h
+-
+
+/home/kyle/Dropbox/Desktop/simulation - C++/src/main.cpp
+stdio.h
+-
+cstdio
+-
+cstdlib
+-
+ctime
+-
+cmath
+-
+vector
+-
+pthread.h
+-
+../include/agent.h
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/agent.h
+../include/target.h
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
+../include/visualization.h
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/visualization.h
+GL/gl.h
+-
+GL/glut.h
+-
+
