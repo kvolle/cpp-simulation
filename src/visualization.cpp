@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "../include/visualization.h" 
 #include <cstdio>
-
+#include <unistd.h>
 #define KEY_ESCAPE 27
 
 Visualization::Visualization(int argc, char **argv){
@@ -28,6 +28,8 @@ void Visualization::display(){
 	glTranslatef(0.0f,0.0f,-3.0f);
 
 	glutSwapBuffers();
+	usleep(100000);
+	exit(0);
 }
 
 void Visualization::initialize(){

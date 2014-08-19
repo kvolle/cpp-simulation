@@ -41,8 +41,6 @@ cmath
 -
 vector
 -
-pthread.h
--
 ../include/agent.h
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/agent.h
 ../include/target.h

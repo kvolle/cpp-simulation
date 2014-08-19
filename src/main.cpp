@@ -51,7 +51,9 @@ int main(int argc, char ** argv){
 	printf("%d\n",i);
 	//printf("%f %f\n",agent_test.current_target->position[0],agent_test.current_target->position[1]);
     printf("Active agents destroyed\n");
-//	Visualization visualization(argc,argv);
-//	glutMainLoop();
+	Visualization visualization(argc,argv);
+	for (int z=0;z<1000;z++){
+		glutMainLoop();
+	}
 	return 0;
 }
