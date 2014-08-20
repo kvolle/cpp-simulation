@@ -204,6 +204,30 @@ src/target.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/target.cpp.s
 .PHONY : src/target.cpp.s
 
+src/visualization.o: src/visualization.cpp.o
+.PHONY : src/visualization.o
+
+# target to build an object file
+src/visualization.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/visualization.cpp.o
+.PHONY : src/visualization.cpp.o
+
+src/visualization.i: src/visualization.cpp.i
+.PHONY : src/visualization.i
+
+# target to preprocess a source file
+src/visualization.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/visualization.cpp.i
+.PHONY : src/visualization.cpp.i
+
+src/visualization.s: src/visualization.cpp.s
+.PHONY : src/visualization.s
+
+# target to generate assembly for a file
+src/visualization.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/visualization.cpp.s
+.PHONY : src/visualization.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -225,6 +249,9 @@ help:
 	@echo "... src/target.o"
 	@echo "... src/target.i"
 	@echo "... src/target.s"
+	@echo "... src/visualization.o"
+	@echo "... src/visualization.i"
+	@echo "... src/visualization.s"
 .PHONY : help
 
 
