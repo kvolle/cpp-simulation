@@ -156,6 +156,30 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/simulation.o: src/simulation.cpp.o
+.PHONY : src/simulation.o
+
+# target to build an object file
+src/simulation.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/simulation.cpp.o
+.PHONY : src/simulation.cpp.o
+
+src/simulation.i: src/simulation.cpp.i
+.PHONY : src/simulation.i
+
+# target to preprocess a source file
+src/simulation.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/simulation.cpp.i
+.PHONY : src/simulation.cpp.i
+
+src/simulation.s: src/simulation.cpp.s
+.PHONY : src/simulation.s
+
+# target to generate assembly for a file
+src/simulation.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/simulation.cpp.s
+.PHONY : src/simulation.cpp.s
+
 src/target.o: src/target.cpp.o
 .PHONY : src/target.o
 
@@ -180,30 +204,6 @@ src/target.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/target.cpp.s
 .PHONY : src/target.cpp.s
 
-src/visualization.o: src/visualization.cpp.o
-.PHONY : src/visualization.o
-
-# target to build an object file
-src/visualization.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/visualization.cpp.o
-.PHONY : src/visualization.cpp.o
-
-src/visualization.i: src/visualization.cpp.i
-.PHONY : src/visualization.i
-
-# target to preprocess a source file
-src/visualization.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/visualization.cpp.i
-.PHONY : src/visualization.cpp.i
-
-src/visualization.s: src/visualization.cpp.s
-.PHONY : src/visualization.s
-
-# target to generate assembly for a file
-src/visualization.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/visualization.cpp.s
-.PHONY : src/visualization.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,12 +219,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/simulation.o"
+	@echo "... src/simulation.i"
+	@echo "... src/simulation.s"
 	@echo "... src/target.o"
 	@echo "... src/target.i"
 	@echo "... src/target.s"
-	@echo "... src/visualization.o"
-	@echo "... src/visualization.i"
-	@echo "... src/visualization.s"
 .PHONY : help
 
 

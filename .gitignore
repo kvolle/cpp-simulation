@@ -1,3 +1,4 @@
 *.cpp~
 *.o
 *.dir/src/*.cpp.o
+*.h~

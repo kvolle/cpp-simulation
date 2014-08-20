@@ -115,35 +115,35 @@ CMakeFiles/main.dir/src/agent.cpp.o.provides: CMakeFiles/main.dir/src/agent.cpp.
 
 CMakeFiles/main.dir/src/agent.cpp.o.provides.build: CMakeFiles/main.dir/src/agent.cpp.o
 
-CMakeFiles/main.dir/src/visualization.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/visualization.cpp.o: ../src/visualization.cpp
+CMakeFiles/main.dir/src/simulation.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/simulation.cpp.o: ../src/simulation.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/kyle/Dropbox/Desktop/simulation - C++/build/CMakeFiles" $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/visualization.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/visualization.cpp.o -c "/home/kyle/Dropbox/Desktop/simulation - C++/src/visualization.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/simulation.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/simulation.cpp.o -c "/home/kyle/Dropbox/Desktop/simulation - C++/src/simulation.cpp"
 
-CMakeFiles/main.dir/src/visualization.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/visualization.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/kyle/Dropbox/Desktop/simulation - C++/src/visualization.cpp" > CMakeFiles/main.dir/src/visualization.cpp.i
+CMakeFiles/main.dir/src/simulation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/simulation.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/kyle/Dropbox/Desktop/simulation - C++/src/simulation.cpp" > CMakeFiles/main.dir/src/simulation.cpp.i
 
-CMakeFiles/main.dir/src/visualization.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/visualization.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/kyle/Dropbox/Desktop/simulation - C++/src/visualization.cpp" -o CMakeFiles/main.dir/src/visualization.cpp.s
+CMakeFiles/main.dir/src/simulation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/simulation.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/kyle/Dropbox/Desktop/simulation - C++/src/simulation.cpp" -o CMakeFiles/main.dir/src/simulation.cpp.s
 
-CMakeFiles/main.dir/src/visualization.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/visualization.cpp.o.requires
+CMakeFiles/main.dir/src/simulation.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/simulation.cpp.o.requires
 
-CMakeFiles/main.dir/src/visualization.cpp.o.provides: CMakeFiles/main.dir/src/visualization.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/visualization.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/visualization.cpp.o.provides
+CMakeFiles/main.dir/src/simulation.cpp.o.provides: CMakeFiles/main.dir/src/simulation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/simulation.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/simulation.cpp.o.provides
 
-CMakeFiles/main.dir/src/visualization.cpp.o.provides.build: CMakeFiles/main.dir/src/visualization.cpp.o
+CMakeFiles/main.dir/src/simulation.cpp.o.provides.build: CMakeFiles/main.dir/src/simulation.cpp.o
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/src/main.cpp.o" \
 "CMakeFiles/main.dir/src/target.cpp.o" \
 "CMakeFiles/main.dir/src/agent.cpp.o" \
-"CMakeFiles/main.dir/src/visualization.cpp.o"
+"CMakeFiles/main.dir/src/simulation.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -151,7 +151,7 @@ main_EXTERNAL_OBJECTS =
 main: CMakeFiles/main.dir/src/main.cpp.o
 main: CMakeFiles/main.dir/src/target.cpp.o
 main: CMakeFiles/main.dir/src/agent.cpp.o
-main: CMakeFiles/main.dir/src/visualization.cpp.o
+main: CMakeFiles/main.dir/src/simulation.cpp.o
 main: /usr/lib/x86_64-linux-gnu/libGLU.so
 main: /usr/lib/x86_64-linux-gnu/libGL.so
 main: /usr/lib/x86_64-linux-gnu/libSM.so
@@ -173,7 +173,7 @@ CMakeFiles/main.dir/build: main
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/main.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/target.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/agent.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/visualization.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/simulation.cpp.o.requires
 .PHONY : CMakeFiles/main.dir/requires
 
 CMakeFiles/main.dir/clean:
