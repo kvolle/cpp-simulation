@@ -24,7 +24,7 @@ endif(NOT OPENGL_FOUND)
 #########################################################
 # Include Files
 #########################################################
-add_executable(main src/main.cpp src/target.cpp src/agent.cpp src/simulation.cpp)
+add_executable(main src/main.cpp src/target.cpp src/agent.cpp src/simulation.cpp src/visualization.cpp)
 ########################################################
 # Linking & stuff
 #########################################################

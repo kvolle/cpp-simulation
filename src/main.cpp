@@ -15,7 +15,8 @@
 using namespace std;
 
 int main(int argc, char ** argv){
-	Simulation simulation(argc,argv);
+	Simulation simulation;
+	Visualization visualization(argc,argv,simulation);
 	glutMainLoop();
 	return 0;
 }

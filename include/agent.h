@@ -4,6 +4,8 @@
 #include <iostream>
 #include <cmath>
 #include "target.h"
+#include <vector>
+
 class agent {
 public:
 	int agent_id;
@@ -15,10 +17,12 @@ public:
 		float descent_rate;
 
     } state;
-	target * current_target;
+
+    int current_target;
 	bool destroyed;
 
-	agent(int);
+    std::vector<target> all_targets;
+    agent(int,std::vector<target> &);
 	~agent();
 	void set_velocity();
 	void update_state();	

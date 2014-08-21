@@ -4,11 +4,13 @@
 #include <unistd.h>
 #define KEY_ESCAPE 27
 
-Visualization::Visualization(int argc, char **argv){
+Simulation  Visualization::simulation;
+int Visualization::counter;
+Visualization::Visualization(int argc, char **argv,Simulation sim){
 	win.width = 300;
 	win.height = 900;
 	win.title = "Example";
-	win.field_of_view_angle = 45;
+	win.field_of_view_angle = 55;
 	win.z_near = 1.0f;
 	win.z_far = 500.0f;
 
@@ -20,16 +22,41 @@ Visualization::Visualization(int argc, char **argv){
 	glutIdleFunc(display);
 	glutKeyboardFunc(keyboard);
 	initialize();
+
+    simulation =  sim;
+	counter = 0;
 }
 
 void Visualization::display(){
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glLoadIdentity();
-	glTranslatef(0.0f,0.0f,-3.0f);
+    if ((counter<1000)&&(simulation.agents.size() !=0)){
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glLoadIdentity();
+		glTranslatef(-75.0f,-225.0f,-500.0f);
 
-	glutSwapBuffers();
-	usleep(100000);
-	exit(0);
+        simulation.timestep();
+        for (int i=0;i<simulation.agents.size();i++){
+			glBegin(GL_TRIANGLES);
+			glColor3f(0.1,0.2,0.3);
+            glVertex3f(3*simulation.agents[i].state.position[0]-2,3*simulation.agents[i].state.position[1],0);
+            glVertex3f(3*simulation.agents[i].state.position[0]+2,3*simulation.agents[i].state.position[1],0);
+            glVertex3f(3*simulation.agents[i].state.position[0],3*simulation.agents[i].state.position[1]+2,0);
+			glEnd();
+		}
+        for (int j=0;j<simulation.targets.size();j++){
+			glBegin(GL_QUADS);
+			glColor3f(0.6,0.0,0.0);
+            glVertex3f(3*simulation.targets[j].position[0]-2,3*simulation.targets[j].position[1]-2,0);
+            glVertex3f(3*simulation.targets[j].position[0]+2,3*simulation.targets[j].position[1]-2,0);
+            glVertex3f(3*simulation.targets[j].position[0]+2,3*simulation.targets[j].position[1]+2,0);
+            glVertex3f(3*simulation.targets[j].position[0]-2,3*simulation.targets[j].position[1]+2,0);
+			glEnd();
+        }
+		glutSwapBuffers();
+		counter++;
+//        printf("%s\n", simulation.targets[0].destroyed ? "true" : "false");
+	} else{
+		exit(0);
+	}
 }
 
 void Visualization::initialize(){
