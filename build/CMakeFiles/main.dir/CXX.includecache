@@ -14,25 +14,15 @@ cmath
 target.h
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
 
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/simulation.h
-target.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
-agent.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/agent.h
-vector
--
-stdlib.h
--
-
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
 cstdlib
 -
 cstdio
 -
 
-/home/kyle/Dropbox/Desktop/simulation - C++/src/simulation.cpp
-../include/simulation.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/simulation.h
-vector
+/home/kyle/Dropbox/Desktop/simulation - C++/src/agent.cpp
+../include/agent.h
+/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/agent.h
+time.h
 -
 
