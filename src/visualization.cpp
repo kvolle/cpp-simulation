@@ -55,6 +55,7 @@ void Visualization::display(){
 		counter++;
 //        printf("%s\n", simulation.targets[0].destroyed ? "true" : "false");
 	} else{
+        std::cout << "Successful exit" << std::endl;
 		exit(0);
 	}
 }

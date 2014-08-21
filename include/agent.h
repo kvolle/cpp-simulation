@@ -21,7 +21,7 @@ public:
     int current_target;
 	bool destroyed;
 
-    std::vector<target> all_targets;
+    std::vector<target>* all_targets;
     agent(int,std::vector<target> &);
 	~agent();
 	void set_velocity();
