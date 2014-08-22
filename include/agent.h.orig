@@ -21,9 +21,15 @@ public:
     int current_target;
 	bool destroyed;
 
-    std::vector<Target*> all_targets;
-    Agent(int,std::vector<Target*> &);
+<<<<<<< HEAD
+    std::vector<Target> all_targets;
+    Agent(int,std::vector<Target> &);
     ~Agent();
+=======
+    std::vector<target>* all_targets;
+    agent(int,std::vector<target> &);
+	~agent();
+>>>>>>> 1b3bd2af1b
 	void set_velocity();
 	void update_state();	
 };

@@ -8,7 +8,7 @@
 
 class Simulation {
 public:
-    std::vector<Target> targets;
+    std::vector<Target *> targets;
     std::vector<Agent> agents;
 
 	int surviving_agents;

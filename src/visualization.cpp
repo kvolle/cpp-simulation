@@ -28,32 +28,44 @@ Visualization::Visualization(int argc, char **argv,Simulation sim){
 }
 
 void Visualization::display(){
-    if ((counter<1000)&&(simulation.agents.size() !=0)){
+    if ((counter<1000)&&(simulation.surviving_agents !=0)){
+
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glLoadIdentity();
 		glTranslatef(-75.0f,-225.0f,-500.0f);
 
         simulation.timestep();
-        for (int i=0;i<simulation.agents.size();i++){
-			glBegin(GL_TRIANGLES);
-			glColor3f(0.1,0.2,0.3);
-            glVertex3f(3*simulation.agents[i].state.position[0]-2,3*simulation.agents[i].state.position[1],0);
-            glVertex3f(3*simulation.agents[i].state.position[0]+2,3*simulation.agents[i].state.position[1],0);
-            glVertex3f(3*simulation.agents[i].state.position[0],3*simulation.agents[i].state.position[1]+2,0);
-			glEnd();
-		}
-        for (int j=0;j<simulation.targets.size();j++){
-			glBegin(GL_QUADS);
-			glColor3f(0.6,0.0,0.0);
-            glVertex3f(3*simulation.targets[j].position[0]-2,3*simulation.targets[j].position[1]-2,0);
-            glVertex3f(3*simulation.targets[j].position[0]+2,3*simulation.targets[j].position[1]-2,0);
-            glVertex3f(3*simulation.targets[j].position[0]+2,3*simulation.targets[j].position[1]+2,0);
-            glVertex3f(3*simulation.targets[j].position[0]-2,3*simulation.targets[j].position[1]+2,0);
-			glEnd();
+        for (int i=0;i<simulation.targets.size();i++){
+            printf("Target %d: ",i);
+            printf("%s\n", simulation.targets[i]->destroyed ? "true" : "false");
         }
-		glutSwapBuffers();
-		counter++;
-//        printf("%s\n", simulation.targets[0].destroyed ? "true" : "false");
+
+        for (int j=0;j<simulation.targets.size();j++){
+            if(!simulation.targets[j]->destroyed){
+                glBegin(GL_QUADS);
+                glColor3f(0.6,0.0,0.0);
+                glVertex3f(3*simulation.targets[j]->position[0]-2,3*simulation.targets[j]->position[1]-2,0);
+                glVertex3f(3*simulation.targets[j]->position[0]+2,3*simulation.targets[j]->position[1]-2,0);
+                glVertex3f(3*simulation.targets[j]->position[0]+2,3*simulation.targets[j]->position[1]+2,0);
+                glVertex3f(3*simulation.targets[j]->position[0]-2,3*simulation.targets[j]->position[1]+2,0);
+                glEnd();
+            }
+            //printf("Target - %d: ",j);
+            //printf("%s\n", simulation.targets[j].destroyed ? "true" : "false");
+        }
+        for (int i=0;i<simulation.agents.size();i++){
+            if(!simulation.agents[i].destroyed){
+                glBegin(GL_TRIANGLES);
+                glColor3f(0.1,0.2,0.3);
+                glVertex3f(3*simulation.agents[i].state.position[0]-2,3*simulation.agents[i].state.position[1],0);
+                glVertex3f(3*simulation.agents[i].state.position[0]+2,3*simulation.agents[i].state.position[1],0);
+                glVertex3f(3*simulation.agents[i].state.position[0],3*simulation.agents[i].state.position[1]+2,0);
+                glEnd();
+            }
+		}
+        glutSwapBuffers();
+
+        counter++;
 	} else{
         std::cout << "Successful exit" << std::endl;
 		exit(0);
