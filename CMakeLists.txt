@@ -24,7 +24,8 @@ endif(NOT OPENGL_FOUND)
 #########################################################
 # Include Files
 #########################################################
-add_executable(main src/main.cpp src/target.cpp src/agent.cpp src/simulation.cpp src/visualization.cpp)
+file(GLOB exec_source "src/*.cpp" "include/*.h*")
+add_executable(main ${exec_source})
 ########################################################
 # Linking & stuff
 #########################################################
