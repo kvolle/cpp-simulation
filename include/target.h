@@ -4,10 +4,10 @@
 #include <cstdlib>
 #include <cstdio>
 
-class target{
+class Target{
 public:
     float position[3];
 	bool destroyed;
-    target();
+    Target();
 };
 #endif

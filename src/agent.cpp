@@ -1,6 +1,6 @@
 #include "../include/agent.h"
 #include <time.h>
-agent::agent(int id, std::vector<target> &tar): all_targets(tar){
+Agent::Agent(int id, std::vector<Target> &tar): all_targets(tar){
     agent_id = id;
     state.velocity = 0.0f;
     state.heading = 0.0f;
@@ -11,13 +11,13 @@ agent::agent(int id, std::vector<target> &tar): all_targets(tar){
     state.position[1]=rand()%51;
     state.position[2]=30;
 };
-agent::~agent(){
+Agent::~Agent(){
 //	printf("X: %6.3f Y: %6.3f Z: %6.3f\n",state.position[0],state.position[1],state.position[2]);
 //	printf("Agent %d Destroyed\n",agent_id);
 };
 
 void
-agent::set_velocity(){
+Agent::set_velocity(){
     if (std::isfinite(all_targets[current_target].position[0])&&std::isfinite(all_targets[current_target].position[1])){
 		// Starting with constant velocity
 		// This will change for synchronization
@@ -32,7 +32,7 @@ agent::set_velocity(){
 }
 
 void
-agent::update_state(){
+Agent::update_state(){
 	// Point dynamics, no rotations
 	// Delta t = 0.1s (for now)
 	// North-East-Down

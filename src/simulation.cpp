@@ -10,13 +10,13 @@ Simulation::Simulation(){
 	srand(time(NULL));
 
 	for (int t=0;t<numTargets;t++){
-		target temp_target;
+        Target temp_target;
         targets.push_back( temp_target);
-        temp_target.~target();
+       // temp_target.~target();
 	}
     printf("??????\n");
 	for(int i=0;i<numAgents;i++){
-        agent temp_agent(i, targets);
+        Agent temp_agent(i, targets);
         agents.push_back(temp_agent);
         //temp_agent.~agent();
 	}

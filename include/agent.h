@@ -6,7 +6,7 @@
 #include "target.h"
 #include <vector>
 
-class agent {
+class Agent {
 public:
 	int agent_id;
     struct State {
@@ -21,9 +21,9 @@ public:
     int current_target;
 	bool destroyed;
 
-    std::vector<target> all_targets;
-    agent(int,std::vector<target> &);
-	~agent();
+    std::vector<Target> all_targets;
+    Agent(int,std::vector<Target> &);
+    ~Agent();
 	void set_velocity();
 	void update_state();	
 };

@@ -1,7 +1,7 @@
 #include "../include/target.h"
 #include <time.h>
 
-target::target(){
+Target::Target(){
 	//srand(time(NULL));
 
     position[0] = rand()%51;
