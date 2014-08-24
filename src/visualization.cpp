@@ -30,16 +30,16 @@ Visualization::Visualization(int argc, char **argv,Simulation sim){
 void Visualization::display(){
     if ((counter<1000)&&(simulation.surviving_agents !=0)){
 
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		glLoadIdentity();
-		glTranslatef(-75.0f,-225.0f,-500.0f);
+        //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        //glLoadIdentity();
+        //glTranslatef(-75.0f,-225.0f,-500.0f);
 
         simulation.timestep();
         for (int i=0;i<simulation.targets.size();i++){
-            printf("Target %d: ",i);
-            printf("%s\n", simulation.targets[i]->destroyed ? "true" : "false");
+            //printf("Target %d: ",i);
+           // printf("%s\n", simulation.targets[i]->destroyed ? "true" : "false");
         }
-
+/*
         for (int j=0;j<simulation.targets.size();j++){
             if(!simulation.targets[j]->destroyed){
                 glBegin(GL_QUADS);
@@ -64,11 +64,11 @@ void Visualization::display(){
             }
 		}
         glutSwapBuffers();
-
+*/
         counter++;
 	} else{
-        std::cout << "Successful exit" << std::endl;
-		exit(0);
+        std::cout << "Exiting" << std::endl;
+        std::exit(0);
 	}
 }
 
