@@ -37,7 +37,6 @@ public:
         if (simData){
             simData->timestep();
         }
-        else{printf("FAIL\n");}
         traverse(node,nv);
     }
 };
