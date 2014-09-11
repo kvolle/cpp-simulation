@@ -29,7 +29,7 @@ public:
     osgViewer::Viewer viewer;
     osg::Group* root;
 };
-
+/*
 class root_cb: public osg::NodeCallback{
 public:
     virtual void operator()(osg::Node* node, osg::NodeVisitor* nv){
@@ -40,5 +40,6 @@ public:
         else{printf("FAIL\n");}
         traverse(node,nv);
     }
+    */
 };
 #endif

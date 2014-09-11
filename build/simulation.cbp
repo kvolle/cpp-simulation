@@ -82,18 +82,6 @@
       </Unit>
       <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/src/target.cpp">
       </Unit>
-      <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/src/visualization.cpp">
-      </Unit>
-      <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/include/agent.h">
-      </Unit>
-      <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/include/agent.h.orig">
-      </Unit>
-      <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/include/simulation.h">
-      </Unit>
-      <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/include/target.h">
-      </Unit>
-      <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/include/visualization.h">
-      </Unit>
       <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
       </Unit>

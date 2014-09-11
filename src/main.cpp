@@ -13,7 +13,11 @@
 
 int main(int argc, char ** argv){
     Simulation simulation;
-    //Visualization visualization(argc,argv,simulation);
-    //glutMainLoop();
+    simulation.viewer.setSceneData(simulation.root);
+    simulation.viewer.run();
+    while(!simulation.viewer.done()){
+        simulation.viewer.frame();
+        //printf("Viewer loop\n");
+    }
 	return 0;
 }

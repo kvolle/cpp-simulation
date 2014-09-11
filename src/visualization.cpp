@@ -37,6 +37,7 @@ void Visualization::display(){
         std::exit(0);
 	}
 }
+/*
 class agent_cb: public osg::NodeCallback{
 public:
     virtual void operator()(osg::Node* node, osg::NodeVisitor* nv){
@@ -45,4 +46,4 @@ public:
             xform->setPosition(osg::Vec3(0,0,0));
         }
     }
-};
+};*/

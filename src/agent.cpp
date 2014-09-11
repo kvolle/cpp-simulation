@@ -12,10 +12,11 @@ Agent::Agent(int id, std::vector<Target*> &tar,osg::Group* &root_node): all_targ
     state.position[1]=rand()%51;
     state.position[2]=30;
     agent_xform = new osg::PositionAttitudeTransform();
-    agent_xform->setPosition(osg::Vec3(state.position[0],state.position[1],-state.position[2]) );
+    agent_xform->setPosition(osg::Vec3(state.position[0],state.position[1],state.position[2]) );
     agent_model = osgDB::readNodeFile("../models/plane_file.obj");
     root_node->addChild(agent_xform);
     agent_xform->addChild(agent_model);
+    agent_model->setUpdateCallback(new agent_cb);
 };
 Agent::~Agent(){
 //	printf("X: %6.3f Y: %6.3f Z: %6.3f\n",state.position[0],state.position[1],state.position[2]);
