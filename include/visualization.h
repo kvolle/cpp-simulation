@@ -1,25 +1,21 @@
 #include <stdlib.h>
-#include <GL/glut.h>
-#include <GL/gl.h>
 #include "simulation.h"
+
+#include <osg/Node>
+#include <osg/Group>
+#include <osg/Geode>
+#include <osg/Geometry>
+#include <osg/Texture2D>
+#include <osgDB/ReadFile>
+#include <osgViewer/Viewer>
+#include <osg/PositionAttitudeTransform>
+#include <osgGA/TrackballManipulator>
 
 class Visualization{
 public:
-	typedef struct{
-		int width;
-		int height;
-		char* title;
-
-		float field_of_view_angle;
-		float z_near;
-		float z_far;
-	} glutWindow;
-
-    static Simulation simulation;
-	static int counter;
-	glutWindow win;
+    osgViewer::Viewer viewer;
+    Simulation simulation;//static Simulation simulation;
+    int counter;//static int counter;
 	Visualization(int, char**,Simulation);
-	static void display();
-	void initialize();
-	static void keyboard(unsigned char key, int mousePositionX,int mousePositonY);
+    void display();//static void display();
 };

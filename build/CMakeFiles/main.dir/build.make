@@ -177,15 +177,10 @@ main: CMakeFiles/main.dir/src/simulation.cpp.o
 main: CMakeFiles/main.dir/src/main.cpp.o
 main: CMakeFiles/main.dir/src/agent.cpp.o
 main: CMakeFiles/main.dir/src/target.cpp.o
-main: /usr/lib/x86_64-linux-gnu/libGLU.so
-main: /usr/lib/x86_64-linux-gnu/libGL.so
-main: /usr/lib/x86_64-linux-gnu/libSM.so
-main: /usr/lib/x86_64-linux-gnu/libICE.so
-main: /usr/lib/x86_64-linux-gnu/libX11.so
-main: /usr/lib/x86_64-linux-gnu/libXext.so
-main: /usr/lib/x86_64-linux-gnu/libglut.so
-main: /usr/lib/x86_64-linux-gnu/libXmu.so
-main: /usr/lib/x86_64-linux-gnu/libXi.so
+main: /usr/lib/libosg.so
+main: /usr/lib/libosgDB.so
+main: /usr/lib/libosgViewer.so
+main: /usr/lib/libOpenThreads.so
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable main"

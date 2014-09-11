@@ -7,23 +7,26 @@
 using namespace std;
 
 Simulation::Simulation(){
+    printf("Simulation Constructor Called\n");
+    osgViewer::Viewer viewer;
+    osg::Group* root = new osg::Group();
+
 	srand(time(NULL));
 
 	for (int t=0;t<numTargets;t++){
         Target * temp_target = new Target;
         targets.push_back( temp_target);
 	}
-    printf("??????\n");
 	for(int i=0;i<numAgents;i++){
-        Agent temp_agent(i,targets);
+        Agent temp_agent(i,targets,root);
         agents.push_back(temp_agent);
 	}
-    printf("\t");
 }
 Simulation::~Simulation(){
 }
 void Simulation::timestep(){
     surviving_agents = 0;
+
 	for(int j=0;j<agents.size();j++){
 		agents[j].set_velocity();
 		agents[j].update_state();

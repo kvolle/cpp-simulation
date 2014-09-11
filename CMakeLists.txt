@@ -1,34 +1,21 @@
 cmake_minimum_required(VERSION 2.8)
 # Project Name
 PROJECT(simulation)
-#########################################################
-# FIND GLUT
-#########################################################
-find_package(GLUT REQUIRED)
-include_directories(${GLUT_INCLUDE_DIRS})
-link_directories(${GLUT_LIBRARY_DIRS})
-add_definitions(${GLUT_DEFINITIONS})
-if(NOT GLUT_FOUND)
-    message(ERROR " GLUT not found!")
-endif(NOT GLUT_FOUND)
-#########################################################
-# FIND OPENGL
-#########################################################
-find_package(OpenGL REQUIRED)
-include_directories(${OpenGL_INCLUDE_DIRS})
-link_directories(${OpenGL_LIBRARY_DIRS})
-add_definitions(${OpenGL_DEFINITIONS})
-if(NOT OPENGL_FOUND)
-    message(ERROR " OPENGL not found!")
-endif(NOT OPENGL_FOUND)
+
 #########################################################
 # Include Files
 #########################################################
 file(GLOB exec_source "src/*.cpp" "include/*.h*")
+#add_executable(main src/main.cpp src/agent.cpp src/target.cpp src/simulation.cpp src/visualization.cpp)
 add_executable(main ${exec_source})
 ########################################################
 # Linking & stuff
 #########################################################
-
-  # create the program "test"
-  target_link_libraries(main ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
+set(CMAKE_MODULE_PATH "PATH_TO/CMakeModules;${CMAKE_MODULE_PATH}") 
+FIND_PACKAGE(OpenThreads)
+FIND_PACKAGE(OSG)
+FIND_PACKAGE(osgDB)
+FIND_PACKAGE(osgViewer)
+include_directories(${OSG_INCLUDE_DIR})
+TARGET_LINK_LIBRARIES(main ${OSG_LIBRARY} ${OSGUTIL_LIBRARY}
+${OSGDB_LIBRARY} ${OSGVIEWER_LIBRARY} ${OPENTHREADS_LIBRARY})

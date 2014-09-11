@@ -5,6 +5,10 @@
 #include <cmath>
 #include "target.h"
 #include <vector>
+#include <osg/Group>
+#include <osg/Node>
+#include <osgDB/ReadFile>
+#include <osg/PositionAttitudeTransform>
 
 class Agent {
 public:
@@ -21,8 +25,11 @@ public:
     int current_target;
 	bool destroyed;
 
+    osg::Node* agent_model;
+    osg::PositionAttitudeTransform* agent_xform;
+
     std::vector<Target*> all_targets;
-    Agent(int,std::vector<Target*> &);
+    Agent(int,std::vector<Target*> &, osg::Group* &);
     ~Agent();
 	void set_velocity();
 	void update_state();	

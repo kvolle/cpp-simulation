@@ -15,6 +15,14 @@ target.h
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
 vector
 -
+osg/Group
+-
+osg/Node
+-
+osgDB/ReadFile
+-
+osg/PositionAttitudeTransform
+-
 
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/simulation.h
 target.h
@@ -24,6 +32,24 @@ agent.h
 vector
 -
 stdlib.h
+-
+osg/Node
+-
+osg/Group
+-
+osg/Geode
+-
+osg/Geometry
+-
+osg/Texture2D
+-
+osgDB/ReadFile
+-
+osgViewer/Viewer
+-
+osg/PositionAttitudeTransform
+-
+osgGA/TrackballManipulator
 -
 
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
@@ -35,12 +61,26 @@ cstdio
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/visualization.h
 stdlib.h
 -
-GL/glut.h
--
-GL/gl.h
--
 simulation.h
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/simulation.h
+osg/Node
+-
+osg/Group
+-
+osg/Geode
+-
+osg/Geometry
+-
+osg/Texture2D
+-
+osgDB/ReadFile
+-
+osgViewer/Viewer
+-
+osg/PositionAttitudeTransform
+-
+osgGA/TrackballManipulator
+-
 
 /home/kyle/Dropbox/Desktop/simulation - C++/src/visualization.cpp
 stdlib.h

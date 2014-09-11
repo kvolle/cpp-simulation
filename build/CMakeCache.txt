@@ -179,6 +179,42 @@ OPENGL_glu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLU.so
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
 //Path to a file.
+OPENTHREADS_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OPENTHREADS_LIBRARY:FILEPATH=/usr/lib/libOpenThreads.so
+
+//Path to a library.
+OPENTHREADS_LIBRARY_DEBUG:FILEPATH=OPENTHREADS_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a file.
+OSGDB_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OSGDB_LIBRARY:FILEPATH=/usr/lib/libosgDB.so
+
+//Path to a library.
+OSGDB_LIBRARY_DEBUG:FILEPATH=OSGDB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a file.
+OSGVIEWER_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OSGVIEWER_LIBRARY:FILEPATH=/usr/lib/libosgViewer.so
+
+//Path to a library.
+OSGVIEWER_LIBRARY_DEBUG:FILEPATH=OSGVIEWER_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a file.
+OSG_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OSG_LIBRARY:FILEPATH=/usr/lib/libosg.so
+
+//Path to a library.
+OSG_LIBRARY_DEBUG:FILEPATH=OSG_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a file.
 X11_ICE_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
@@ -504,8 +540,16 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libGL.so][v()]
+//Details about finding OpenThreads
+FIND_PACKAGE_MESSAGE_DETAILS_OpenThreads:INTERNAL=[/usr/lib/libOpenThreads.so][/usr/include][v()]
 //Details about finding X11
 FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/lib/x86_64-linux-gnu/libX11.so][/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include]
+//Details about finding osg
+FIND_PACKAGE_MESSAGE_DETAILS_osg:INTERNAL=[/usr/lib/libosg.so][/usr/include][v()]
+//Details about finding osgDB
+FIND_PACKAGE_MESSAGE_DETAILS_osgDB:INTERNAL=[/usr/lib/libosgDB.so][/usr/include][v()]
+//Details about finding osgViewer
+FIND_PACKAGE_MESSAGE_DETAILS_osgViewer:INTERNAL=[/usr/lib/libosgViewer.so][/usr/include][v()]
 //ADVANCED property for variable: GLUT_INCLUDE_DIR
 GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_Xi_LIBRARY

@@ -7,16 +7,13 @@
 #include "../include/agent.h"
 #include "../include/target.h"
 #include "../include/simulation.h"
-
 #include "../include/visualization.h"
-#include <GL/gl.h>
-#include <GL/glut.h>
 
-using namespace std;
+//using namespace std;
 
 int main(int argc, char ** argv){
     Simulation simulation;
-	Visualization visualization(argc,argv,simulation);
-	glutMainLoop();
+    //Visualization visualization(argc,argv,simulation);
+    //glutMainLoop();
 	return 0;
 }
