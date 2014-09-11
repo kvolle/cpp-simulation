@@ -7,13 +7,14 @@ Agent::Agent(int id, std::vector<Target*> &tar):all_targets(tar){//,osg::Group* 
     state.heading = 0.0f;
     state.descent_rate = 0.0f;
     destroyed = false;
-    current_target = rand()%(all_targets.size()+1);
+    current_target = rand()%(all_targets.size());
     state.position[0]=rand()%51;
     state.position[1]=rand()%51;
     state.position[2]=30;
     agent_xform = new osg::PositionAttitudeTransform();
-    agent_xform->setPosition(osg::Vec3(state.position[0],state.position[1],state.position[2]) );
-    agent_model = osgDB::readNodeFile("../models/plane_file.obj");
+    agent_xform->setPosition(osg::Vec3(-state.position[1]*15,state.position[0]*15,state.position[2]*15) );
+    agent_xform->setAttitude(osg::Quat(-.707,sqrt(1-.707*.707),0,0));
+    agent_model = osgDB::readNodeFile("../models/missile.obj");
     //root_node->addChild(agent_xform);
     agent_xform->addChild(agent_model);
 };
@@ -24,6 +25,8 @@ Agent::~Agent(){
 
 void
 Agent::set_velocity(){
+    printf("curr: %d - %f,%f\n",current_target,all_targets[current_target]->position[0],all_targets[current_target]->position[1]);
+
     if (std::isfinite(all_targets[current_target]->position[0])&&std::isfinite(all_targets[current_target]->position[1])){
 		// Starting with constant velocity
 		// This will change for synchronization
@@ -54,10 +57,11 @@ Agent::update_state(){
 
     if (pow(all_targets[current_target]->position[0]-state.position[0],2)+pow(all_targets[current_target]->position[1]-state.position[1],2)+pow(all_targets[current_target]->position[2]-state.position[2],2)<1.0f){
 		destroyed = true;
+        agent_model = NULL;
 		if (rand()%1000<800){
             all_targets[current_target]->destroyed = true;
-            all_targets[current_target]->position[0] = 25;
-            all_targets[current_target]->position[1] = 125;
+            //all_targets[current_target]->position[0] = 25;
+            //all_targets[current_target]->position[1] = 125;
 		}
 	}
 }

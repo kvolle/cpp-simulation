@@ -204,6 +204,30 @@ src/target.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/target.cpp.s
 .PHONY : src/target.cpp.s
 
+src/terrain.o: src/terrain.cpp.o
+.PHONY : src/terrain.o
+
+# target to build an object file
+src/terrain.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/terrain.cpp.o
+.PHONY : src/terrain.cpp.o
+
+src/terrain.i: src/terrain.cpp.i
+.PHONY : src/terrain.i
+
+# target to preprocess a source file
+src/terrain.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/terrain.cpp.i
+.PHONY : src/terrain.cpp.i
+
+src/terrain.s: src/terrain.cpp.s
+.PHONY : src/terrain.s
+
+# target to generate assembly for a file
+src/terrain.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/terrain.cpp.s
+.PHONY : src/terrain.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -225,6 +249,9 @@ help:
 	@echo "... src/target.o"
 	@echo "... src/target.i"
 	@echo "... src/target.s"
+	@echo "... src/terrain.o"
+	@echo "... src/terrain.i"
+	@echo "... src/terrain.s"
 .PHONY : help
 
 

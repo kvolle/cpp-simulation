@@ -82,6 +82,8 @@
       </Unit>
       <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/src/target.cpp">
       </Unit>
+      <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/src/terrain.cpp">
+      </Unit>
       <Unit filename="/home/kyle/Dropbox/Desktop/simulation - C++/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
       </Unit>

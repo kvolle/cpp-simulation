@@ -36,7 +36,7 @@ public:
         if (simData){
             simData->timestep();
             for (int i = 0;i<simData->agents.size();i++){
-                simData->agents[i].agent_xform->setPosition(osg::Vec3(simData->agents[i].state.position[0],simData->agents[i].state.position[1],simData->agents[i].state.position[2]));
+                simData->agents[i].agent_xform->setPosition(osg::Vec3(-simData->agents[i].state.position[1]*15,simData->agents[i].state.position[0]*15,simData->agents[i].state.position[2]*15));
             }
         }
         else{printf("fail\n");}

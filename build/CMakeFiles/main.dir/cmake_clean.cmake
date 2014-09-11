@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/agent.cpp.o"
   "CMakeFiles/main.dir/src/target.cpp.o"
   "CMakeFiles/main.dir/src/simulation.cpp.o"
+  "CMakeFiles/main.dir/src/terrain.cpp.o"
   "main.pdb"
   "main"
 )

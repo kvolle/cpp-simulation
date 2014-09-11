@@ -6,7 +6,7 @@ PROJECT(simulation)
 # Include Files
 #########################################################
 file(GLOB exec_source "src/*.cpp" "include/*.h*")
-add_executable(main src/main.cpp src/agent.cpp src/target.cpp src/simulation.cpp)
+add_executable(main src/main.cpp src/agent.cpp src/target.cpp src/simulation.cpp src/terrain.cpp)
 #add_executable(main ${exec_source})
 ########################################################
 # Linking & stuff

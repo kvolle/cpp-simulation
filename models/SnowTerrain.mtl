@@ -1,0 +1,20 @@
+# Material file for SnowTerrain.obj
+
+newmtl Material.001
+	Ns 29
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.111765 0.111765 0.111765
+	Ka 0.0 0.0 0.0
+	map_Kd 686.jpg
+
+newmtl Material.005
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.8 0.8 0.8
+	Ks 0.5 0.5 0.5
+	Ka 0.0 0.0 0.0
+	map_Kd SkyDome-Cloud-Overcast-MidMorning.png
+
