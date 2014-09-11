@@ -12,11 +12,12 @@
 //using namespace std;
 
 int main(int argc, char ** argv){
-    Simulation simulation;
-    simulation.viewer.setSceneData(simulation.root);
-    simulation.viewer.run();
-    while(!simulation.viewer.done()){
-        simulation.viewer.frame();
+    Simulation* root = new Simulation();
+    osgViewer::Viewer viewer;
+    viewer.setSceneData(root);
+    viewer.run();
+    while(!viewer.done()){
+        viewer.frame();
         //printf("Viewer loop\n");
     }
 	return 0;

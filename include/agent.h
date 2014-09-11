@@ -29,7 +29,7 @@ public:
     osg::PositionAttitudeTransform* agent_xform;
 
     std::vector<Target*> all_targets;
-    Agent(int,std::vector<Target*> &, osg::Group* &);
+    Agent(int,std::vector<Target*> &);//, osg::Group* &);
     ~Agent();
 	void set_velocity();
     void update_state();

@@ -58,52 +58,6 @@ cstdlib
 cstdio
 -
 
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/visualization.h
-stdlib.h
--
-simulation.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/simulation.h
-osg/Node
--
-osg/Group
--
-osg/Geode
--
-osg/Geometry
--
-osg/Texture2D
--
-osgDB/ReadFile
--
-osgViewer/Viewer
--
-osg/PositionAttitudeTransform
--
-osgGA/TrackballManipulator
--
-
-/home/kyle/Dropbox/Desktop/simulation - C++/src/main.cpp
-stdio.h
--
-cstdio
--
-cstdlib
--
-ctime
--
-cmath
--
-vector
--
-../include/agent.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/agent.h
-../include/target.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/target.h
-../include/simulation.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/simulation.h
-../include/visualization.h
-/home/kyle/Dropbox/Desktop/simulation - C++/src/../include/visualization.h
-
 /home/kyle/Dropbox/Desktop/simulation - C++/src/simulation.cpp
 ../include/simulation.h
 /home/kyle/Dropbox/Desktop/simulation - C++/src/../include/simulation.h

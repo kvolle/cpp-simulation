@@ -1,6 +1,6 @@
 #include "../include/agent.h"
 #include <time.h>
-Agent::Agent(int id, std::vector<Target*> &tar,osg::Group* &root_node): all_targets(tar){
+Agent::Agent(int id, std::vector<Target*> &tar):all_targets(tar){//,osg::Group* &root_node): all_targets(tar){
     printf("Agent Constructor Called\n");
     agent_id = id;
     state.velocity = 0.0f;
@@ -14,7 +14,7 @@ Agent::Agent(int id, std::vector<Target*> &tar,osg::Group* &root_node): all_targ
     agent_xform = new osg::PositionAttitudeTransform();
     agent_xform->setPosition(osg::Vec3(state.position[0],state.position[1],state.position[2]) );
     agent_model = osgDB::readNodeFile("../models/plane_file.obj");
-    root_node->addChild(agent_xform);
+    //root_node->addChild(agent_xform);
     agent_xform->addChild(agent_model);
     agent_model->setUpdateCallback(new agent_cb);
 };

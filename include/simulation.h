@@ -16,7 +16,7 @@
 #include <osg/PositionAttitudeTransform>
 #include <osgGA/TrackballManipulator>
 
-class Simulation: public osg::Referenced{
+class Simulation: public osg::Group{
 public:
     Simulation();
     ~Simulation();
@@ -26,8 +26,7 @@ public:
     std::vector<Agent> agents;
 
 	int surviving_agents;
-    osgViewer::Viewer viewer;
-    osg::Group* root;
+    //osg::Group* root;
 };
 
 class root_cb: public osg::NodeCallback{
@@ -37,6 +36,7 @@ public:
         if (simData){
             simData->timestep();
         }
+        else{printf("fail\n");}
         traverse(node,nv);
     }
 };
