@@ -32,9 +32,12 @@ public:
 class root_cb: public osg::NodeCallback{
 public:
     virtual void operator()(osg::Node* node, osg::NodeVisitor* nv){
-        osg::ref_ptr<Simulation> simData = dynamic_cast<Simulation*> (node->getUserData() );
+        osg::ref_ptr<Simulation> simData = dynamic_cast<Simulation*> (node );
         if (simData){
             simData->timestep();
+            for (int i = 0;i<simData->agents.size();i++){
+                simData->agents[i].agent_xform->setPosition(osg::Vec3(simData->agents[i].state.position[0],simData->agents[i].state.position[1],simData->agents[i].state.position[2]));
+            }
         }
         else{printf("fail\n");}
         traverse(node,nv);

@@ -1,8 +1,8 @@
 #include "../include/simulation.h"
 #include <vector>
 
-#define numTargets 1
-#define numAgents 1
+#define numTargets 4
+#define numAgents 4
 
 using namespace std;
 
@@ -24,7 +24,6 @@ Simulation::Simulation(){
 Simulation::~Simulation(){
 }
 void Simulation::timestep(){
-    printf("Timestep Called\n");
     surviving_agents = 0;
 
 	for(int j=0;j<agents.size();j++){
